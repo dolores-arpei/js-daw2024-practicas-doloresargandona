@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+    <script>
+      // Crea el Map
+      let personas = new Map();
+
+      // Agrega nombre y edad al Map
+      personas.set("Claudia", 3);
+      personas.set("María", 5);
+      personas.set("Lucía", 13);
+      personas.set("David", 28);
+
+      // Actualiza la edad de uno de los nombres
+      personas.set("María", 6);
+
+      // Imprime los nombres con sus edades
+      console.log("Personas y sus edades:");
+      for (let [clave, valor] of personas) {
+        console.log(`Clave: ${clave}, Valor: ${valor}`);
+      }
+    </script>
+  </body>
+</html>

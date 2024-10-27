@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <script>
+      let paises = ["España", "Francia", "Alemania", "Italia"];
+
+      console.log("Listado de Paises:");
+
+      for (i = 0; i <= paises.length; i++) {
+        console.log(paises[i]); // Imprime los paises del array
+      }
+
+      // Elimina el primer pais
+      delete paises[0]; // elimina el primer elemento del array
+
+      // Tras eliminar un pais
+      console.log("\nPaíses tras eliminar el primero:");
+      for (let i = 0; i < paises.length; i++) {
+        console.log(paises[i]); // Imprime cada país restante
+      }
+    </script>
+  </body>
+</html>

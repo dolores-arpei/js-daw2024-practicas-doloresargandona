@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <script>
+      let data = [
+        { name: "Nacho", telephone: "966112233", age: 40 },
+        { name: "Ana", telephone: "911223344", age: 35 },
+        { name: "Mario", phone: "611998877", age: 15 },
+        { name: "Laura", telephone: "633663366", age: 17 },
+      ];
+
+      // Añade dos elementos al final
+      data.push(
+        { name: "Pedro", telephone: "611944444", age: 25 },
+        { name: "Julia", phone: "633232323", age: 37 }
+      );
+
+      // Comprueba con console.log(data) que se han añadido
+      console.log("Array tras añadir los dos elementos:", data);
+
+      // Ordena el vector por edad, comprueba el resultado
+      data.sort(function (a, b) {
+        return a.age - b.age;
+      });
+      console.log("Array ordenado por edad:", data);
+
+      // Ordena el vector por nombre, comprueba el resultado
+      data.sort(function (a, b) {
+        if (a.name < b.name) 
+          return -1;
+        if (a.name > b.name) 
+          return 1;
+        return 0;
+      });
+
+      console.log("Array ordenado por nombre:", data);
+
+      // Crea y muestra un nuevo vector que contenga solo los mayores de 30 años
+      let mayoresDe30 = data.filter((person) => person.age > 30);
+      console.log("Personas mayores de 30 años:", mayoresDe30);
+    </script>
+  </body>
+</html>

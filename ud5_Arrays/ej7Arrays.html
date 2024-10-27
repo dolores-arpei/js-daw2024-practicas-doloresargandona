@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 7</title>
+  </head>
+  <body>
+    <script>
+      // Función para generar una combinación aleatoria de la lotería
+      function generarCombinacionAleatoria() {
+        let numeros = new Set(); // Set elimina los valores repetidos
+
+        while (numeros.size < 6) {
+          // Seguimos hasta tener 6 números únicos
+          let numeroAleatorio = Math.floor(Math.random() * 49) + 1; // Número entre 1 y 49
+          numeros.add(numeroAleatorio); // Añade el número al Set
+        }
+
+        return Array.from(numeros); // Convertimos el Set en un array
+      }
+
+      // Genera 50 combinaciones
+      console.log("50 combinaciones aleatorias de la lotería primitiva:");
+      for (let i = 0; i < 50; i++) {
+        let combinacion = generarCombinacionAleatoria();
+        console.log(`Combinación ${i + 1}:`, combinacion);
+      }
+    </script>
+  </body>
+</html>
