@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 1</title>
+  </head>
+  <body>
+    <h2>Introduzca palabras</h2>
+    <button onclick="solicitarPalabras()">Introducir Palabras</button>
+
+    <script>
+      // Función que solicita palabras
+      const solicitarPalabras = () => {
+        const palabras = new Set(); // Set almacena palabras únicas. No repetidas
+
+        while (true) {
+          let palabra = prompt(
+            "Introduce una palabra (para terminar deja vacío o cancela):"
+          );
+
+          if (!palabra) break; // aquí termina el buvle cuando se cancela o se deja vacío
+
+          palabras.add(palabra); // Agrega palabra al Set con el método add 
+        }
+
+        // Convierte Set a array y ordenar de Z a A
+        const palabrasOrdenadas = [...palabras] // [...] (spread operator)
+          .sort((a, b) => a.localeCompare(b, "es")) // Ordena los elementos del array con localCompare. a debe ir antes que b
+          .reverse(); // Invierte el orden
+
+        // Mostrar el resultado
+        alert(
+          "Palabras únicas ordenadas de Z a A:\n" + palabrasOrdenadas
+        );
+      };
+    </script>
+  </body>
+</html>
